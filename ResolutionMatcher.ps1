@@ -4,8 +4,8 @@ $lastStreamed = [System.DateTime]::MinValue
 $hostResolution = Get-HostResolution
 $onStreamEventTriggered = $false
 while ($true) {
-    $delaySettings = [pscustomobject]@{StartDelay = 8; EndDelay = 15 } 
-    if (UserIsStreaming) {
+    $delaySettings = [pscustomobject]@{StartDelay = 5; EndDelay = 15 } 
+    if (UserIsStreaming -and !ScreenIsLocked) {
         $lastStreamed = Get-Date
         if (!$onStreamEventTriggered) {
             # Capture host resolution again, in case it changed recently.
