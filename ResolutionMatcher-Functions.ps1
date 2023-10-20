@@ -132,8 +132,8 @@ function UserIsStreaming() {
     return $null -ne (Get-Process nvstreamer -ErrorAction SilentlyContinue)
 }
 
-function ScreenIsLocked() {
-    return $null -ne (Get-Process logonUI -ErrorAction SilentlyContinue)
+function hasPlaynite() {
+    return $null -ne (Get-Process Playnite.FullscreenApp -ErrorAction SilentlyContinue)
 }
 
 function Stop-ResolutionMatcherScript() {

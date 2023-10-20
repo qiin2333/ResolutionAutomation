@@ -4,15 +4,17 @@ $lastStreamed = [System.DateTime]::MinValue
 $hostResolution = Get-HostResolution
 $onStreamEventTriggered = $false
 while ($true) {
-    $delaySettings = [pscustomobject]@{StartDelay = 5; EndDelay = 15 } 
-    if (UserIsStreaming -and !ScreenIsLocked) {
-        $lastStreamed = Get-Date
-        if (!$onStreamEventTriggered) {
-            # Capture host resolution again, in case it changed recently.
-            $hostResolution = Get-HostResolution
-            Start-Sleep -Seconds $delaySettings.StartDelay
-            OnStreamStart
-            $onStreamEventTriggered = $true
+    $delaySettings = [pscustomobject]@{StartDelay = 3; EndDelay = 15 } 
+    if (UserIsStreaming) {
+        if (hasPlaynite) {
+            $lastStreamed = Get-Date
+            if (!$onStreamEventTriggered) {
+                # Capture host resolution again, in case it changed recently.
+                $hostResolution = Get-HostResolution
+                Start-Sleep -Seconds $delaySettings.StartDelay
+                OnStreamStart
+                $onStreamEventTriggered = $true
+            }
         }
 
     }
