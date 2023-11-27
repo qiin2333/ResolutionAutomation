@@ -1,4 +1,4 @@
-## Host Resolution Matching for Moonlight Streaming
+## moonlight串流分辨率主机端自动适配工具（支持HDR）
 
 This script changes your host resolution to match exactly with Moonlight's resolution. This is mostly used for users who have different aspect ratios between the client and host, or anyone who wishes to match the resolution while streaming.
 
