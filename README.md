@@ -1,4 +1,4 @@
-## Host Resolution Matching for Moonlight Streaming
+## moonlight串流分辨率主机端自动适配工具（支持HDR）
 
 This script changes your host resolution to match exactly with Moonlight's resolution. This is mostly used for users who have different aspect ratios between the client and host, or anyone who wishes to match the resolution while streaming.
 
@@ -17,7 +17,7 @@ This script changes your host resolution to match exactly with Moonlight's resol
 
 #### GFE Users
 - You'll need to use the Geforce Experience version of this script instead. 
-  - The current release for Geforce Experience users is: https://github.com/Nonary/ResolutionAutomation/releases/tag/2.0.15_gfe
+  - The current release for Geforce Experience users is: https://github.com/qiin2333/ResolutionAutomation/releases/tag/qres
 
 ### Installation Instructions
 1. Store the downloaded folder in a location you intend to keep. If you delete this folder or move it, the automation will stop working.
